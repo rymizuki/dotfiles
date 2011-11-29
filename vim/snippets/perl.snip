@@ -1,0 +1,145 @@
+#TODO abbr書いてなさすぎわろた
+snippet     pscript
+    #!/usr/bin/env perl
+    use strict;
+    use warnings;
+    use 5.10.0;
+
+snippet     ps12
+    #!/usr/bin/env perl
+    use 5.12.0;
+    use warnings;
+
+snippet     ps14
+    #!/usr/bin/env perl
+    use 5.14.0;
+    use warnings;
+
+snippet     pkg
+    package ${1};
+    use strict;
+    use warnings;
+    use 5.10.0;
+
+snippet     pkg12
+    package ${1};
+    use 5.12.0;
+    use warnings;
+
+snippet     pkg14
+    use 5.14.0;
+    use warnings;
+    package ${1} {
+
+    }
+    1;
+
+snippet     strict
+    use strict;
+    use warnings;
+    use 5.10.0;
+
+snippet     str12
+    use 5.12.0;
+    use warnings;
+
+snippet     str14
+    use 5.14.0;
+    use warnings;
+
+snippet     lmy
+    my ($${1:class}, ${2}) = @_;
+
+snippet     smy
+    my $${1:class} = shift;
+
+snippet     sub
+    sub ${1} {
+        my ($${2:class}, ${3}) = @_;
+        ${4}
+    }
+
+snippet     ssub
+    sub ${1} {
+        my $${2:class} = shift;
+        ${3}
+    }
+
+snippet     vsub
+    sub ${1} {
+        state $validator = Data::Validator->new(
+            ${2}
+        )->with(qw/Method${3}/);
+        my ($${4:class}, $args) = $validator->validate(@_);
+        ${5}
+    }
+
+snippet     vfsub
+    sub ${1} {
+        state $validator = Data::Validator->new(
+            ${2}
+        )${3:->with(qw/${4\}/)};
+        my $args = $validator->validate(@_);
+        ${5}
+    }
+snippet     dv
+        state $validator = Data::Validator->new(
+            ${1}
+        )->with(qw/Method${2}/);
+        my ($${3:class}, $args) = $validator->validate(@_);
+    }
+
+snippet     fdv
+        state $validator = Data::Validator->new(
+            ${1}
+        )${2:->with(qw/${3\}/)};
+        my ($${4:class}, $args) = $validator->validate(@_);
+    }
+
+snippet     import
+    sub import {
+        my $class  = shift;
+        my $caller = caller;
+        ${1}
+    }
+
+#For WAF
+snippet     req
+    $self->req->
+
+snippet     rp
+    my $$1 = $self->req->param("${1}");
+
+snippet     rd
+    $self->redirect("${1}");
+
+snippet     st
+    $self->stash->{${1}} = ${2};
+
+#For container
+#TODO 書く
+
+#Fot test
+snippet     test
+    use strict;
+    use warnings;
+    use Test::More;
+
+snippet     testutil
+    use strict;
+    use warnings;
+    use Test::More;
+    use t::Util;
+
+snippet     testfull
+    use strict;
+    use warnings;
+    use Test::More;
+    use Test::Exception;
+    use t::Util;
+
+snippet     subtest
+    subtest "${1}" => sub {
+        ${2}
+        done_testing;
+    };
