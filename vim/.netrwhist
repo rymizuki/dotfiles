@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/iinuma/project/dotfiles/zsh'
+let g:netrw_dirhist_2='/home/iinuma/project/dotfiles'
+let g:netrw_dirhist_3='/home/iinuma/project/dotfiles/vim'
+let g:netrw_dirhist_4='/home/iinuma/project/dotfiles/vim/vimbackup'
+let g:netrw_dirhist_5='/home/iinuma/project/dotfiles'
+let g:netrw_dirhist_6='/home/iinuma/project/dotfiles/vim'
