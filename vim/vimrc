@@ -71,9 +71,9 @@ set wildmode=list:full
 
 "backup
 set swapfile
-set directory=~/.vim/vimbackup
+set directory=~/.vimbackup
 set backup
-set backupdir=~/.vim/vimbackup
+set backupdir=~/.vimbackup
 
 " tab
 set showtabline=2
