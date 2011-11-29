@@ -1,0 +1,163 @@
+"
+" -----VIMRC
+"
+
+"国際化
+set encoding    =utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp932,iso-2022-jp
+set fileencodings+=,ucs-2le,ucs-2,euc-jp
+
+" syntax
+syntax on
+colorscheme darkblue
+
+" filetype
+filetype on
+filetype indent on
+au BufNewFile,BufRead *.psgi    set filetype=perl
+au BufNewFile,BufRead *.txt     set filetype=perl
+au BufNewFile,BufRead *.zshrc   set filetype=zsh
+au BufNewFile,BufRead *.t       set filetype=perl
+
+setlocal omnifunc=syntaxcomplete#Complete
+autocmd FileType html   set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css    set omnifunc=csscomplete#CompleteCSS
+
+autocmd FileType yaml set sw=2 ts=2
+autocmd FileType css  set sw=2 ts=2
+autocmd FileType html set sw=2 ts=2
+
+set ts=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set autoindent
+set showcmd
+set showmode
+set showmatch
+set ruler
+set nobackup
+set hlsearch        " highlight
+set virtualedit=block
+set whichwrap=b,s,[,],<,>
+set backspace=indent,eol,start
+
+autocmd FileType yaml set sw=2 ts=2
+autocmd FileType css  set sw=2 ts=2
+autocmd FileType html set sw=2 ts=2
+
+"コマンドライン補完を拡張モードへ
+set wildmenu
+set wildmode=list:full
+
+"backup
+set swapfile
+set directory=~/.vim/vimbackup
+set backup
+set backupdir=~/.vim/vimbackup
+
+" tab
+set showtabline=2
+set tabline=%!MyTabLine()
+function MyTabLine()
+    let s = ''
+    for i in range(tabpagenr('$'))
+        if i + 1 == tabpagenr()
+            let s .= '%#TabLineSel#'
+        else
+            let s .= '%#TabLine#'
+        endif
+        let s .= '%' . (i+1) . 'T' 
+        let s .= ' ' . (i+1) . (1==getwinvar(i+1,'&modified')?'[+]':'') . ' %{MyTabLabel(' . (i+1) . ')} '
+    endfor
+    let s .= '%#TabLineFill#%T'
+    if tabpagenr('$') > 1 
+        let s .= '%=%#TabLine#%999Xclose'
+    endif
+    return s
+endfunction
+function MyTabLabel(n)
+    let buflist = tabpagebuflist(a:n)
+    let winnr = tabpagewinnr(a:n)
+    return bufname(buflist[winnr - 1]) 
+endfunction
+
+" git status
+set laststatus=2 " ステータスラインを常に表示
+
+let &statusline = ''
+let &statusline .= '%<%f %h%m%r%w'
+let &statusline .= '%='
+let &statusline .= '[%{pathshorten(getcwd())}]'
+let &statusline .= '%{exists("b:git_branch") &&  b:git_branch != "" ? "[Git:" . b:git_branch . "]" : ""}'  " Gitのブランチ名を表示
+let &statusline .= '%y' 
+let &statusline .= '[%{&l:fileencoding == "" ? &encoding : &l:fileencoding}]' 
+let &statusline .= ' %-14.(%l,%c%V%) %P'
+
+autocmd! BufEnter * let b:git_branch = GetGitBranchName()
+
+function! GetGitBranchName()
+    let dir = expand('%:p:h')
+    let branch = ""
+    let r = system('cd ' . dir . ' && git symbolic-ref HEAD 2> /dev/null')
+    if r != ""
+        let branch = split(r,"/")[-1][:-2]
+    endif
+    return branch
+endfunction
+
+" tabcolor
+hi TabLine     term=reverse cterm=reverse ctermfg=white ctermbg=black
+hi TabLineSel  term=bold cterm=bold,underline ctermfg=9
+hi TabLineFill term=reverse cterm=reverse ctermfg=white ctermbg=black
+
+" keymap
+nmap <ESC><ESC> :nohl<CR>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap <> <><LEFT>
+" perl TT
+inoremap [% [%  %]<LEFT><LEFT><LEFT>
+" perl TX::Syntax::Kolon
+inoremap <: <:  :><LEFT><LEFT><LEFT>
+" PHP
+inoremap <?= <?= ?><LEFT><LEFT><LEFT>
+inoremap <? <?  ?><LEFT><LEFT><LEFT>
+" カーソル操作
+inoremap <C-b> <LEFT>
+inoremap <C-f> <RIGHT>
+
+" tabmap
+" GNU screen likeなキーバインド
+nnoremap :tn   :tabnew .<CR>
+nnoremap <C-p> :tabn<CR>
+nnoremap <C-n> :tabp<CR>
+nnoremap <C-l> :ls<CR>:buffer
+
+" bufferlist用
+
+"-------------------------------------------
+" vim-pathogen
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+
+" neocmplcache
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = "*ku*"
+
+" NERDTree
+let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=30
+
+" Ref
+
