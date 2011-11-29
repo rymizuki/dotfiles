@@ -34,8 +34,8 @@ set fileencodings=ucs-bom,utf-8,cp932,iso-2022-jp
 set fileencodings+=,ucs-2le,ucs-2,euc-jp
 
 " syntax
-syntax on
-colorscheme darkblue
+syntax enable
+colorscheme delek
 
 " filetype
 filetype on
@@ -170,10 +170,7 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_lock_buffer_name_pattern = "*ku*"
 let g:neocomplcache_snippets_dir = "~/.vim/snippets/"
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell': $HOME.'/.vimshell_hist',
-        \ }
+
 " Plugin key-mappings.
 imap <C-k>  <Plug>(neocomplcache_snippets_expand)
 smap <C-k>  <Plug>(neocomplcache_snippets_expand)
@@ -182,6 +179,11 @@ inoremap    <expr><C-l> neocomplcache#complete_common_string()
 
 imap <expr><TAB> pumvisible() ? "\<C-n>" : neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<TAB>"
 imap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
+
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " NERDTree
 let g:NERDTreeShowHidden=1
