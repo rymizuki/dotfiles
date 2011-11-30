@@ -41,7 +41,6 @@ colorscheme delek
 filetype on
 filetype indent on
 au BufNewFile,BufRead *.psgi    set filetype=perl
-au BufNewFile,BufRead *.txt     set filetype=perl
 au BufNewFile,BufRead *.zshrc   set filetype=zsh
 au BufNewFile,BufRead *.t       set filetype=perl
 
