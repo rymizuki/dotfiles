@@ -67,33 +67,33 @@ snippet     ssub
 
 snippet     vsub
     sub ${1} {
-        state $validator = Data::Validator->new(
+        state $v = Data::Validator->new(
             ${2}
         )->with(qw/Method${3}/);
-        my ($${4:class}, $args) = $validator->validate(@_);
+        my ($${4:class}, $args) = $v->validate(@_);
         ${5}
     }
 
 snippet     vfsub
     sub ${1} {
-        state $validator = Data::Validator->new(
+        state $v = Data::Validator->new(
             ${2}
         )${3:->with(qw/${4\}/)};
-        my $args = $validator->validate(@_);
+        my $args = $v->validate(@_);
         ${5}
     }
 snippet     dv
-        state $validator = Data::Validator->new(
+        state $v = Data::Validator->new(
             ${1}
         )->with(qw/Method${2}/);
-        my ($${3:class}, $args) = $validator->validate(@_);
+        my ($${3:class}, $args) = $v->validate(@_);
     }
 
 snippet     fdv
-        state $validator = Data::Validator->new(
+        state $v = Data::Validator->new(
             ${1}
         )${2:->with(qw/${3\}/)};
-        my ($${4:class}, $args) = $validator->validate(@_);
+        my ($${4:class}, $args) = $v->validate(@_);
     }
 
 snippet     import
