@@ -155,8 +155,8 @@ nnoremap <C-p> :tabn<CR>
 nnoremap <C-n> :tabp<CR>
 nnoremap <C-l> :ls<CR>:buffer
 
-" bufferlist用
-
+" neocomplcache edit snippets
+nnoremap :es    :NeoComplCacheEditSnippets<CR>
 
 "-------------------------------------------
 " neocmplcache
