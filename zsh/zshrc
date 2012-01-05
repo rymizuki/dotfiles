@@ -145,8 +145,11 @@ setopt NO_flow_control
 setopt NO_hup
 
 
-# 外部ファイル
+# TODO 外部ファイル
 source ~/.mf.zshrc
+
+# perlbrew
+source ~/perl5/perlbrew/etc/bashrc
 
 # 関数
 function szsh_all () {
@@ -208,3 +211,5 @@ alias -g W="| wc"
 # Git
 alias -g gc="git checkout"
 alias -g gb="git branch"
+
+

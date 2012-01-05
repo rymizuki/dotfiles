@@ -27,17 +27,15 @@ Bundle 'takuji31/xslate-vim'
 "-------------------------------------------
 
 "国際化
-set encoding=utf-8
+set encoding    =utf-8
+set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
-set fileformats=unix,dos,mac
-set ambiwidth=double
+set fileencodings=ucs-bom,utf-8,cp932,iso-2022-jp
+set fileencodings+=,ucs-2le,ucs-2,euc-jp
 
 " syntax
 syntax enable
 colorscheme delek
-"colorscheme Light
-"colorscheme darkblue 
 
 " filetype
 filetype on
@@ -158,7 +156,8 @@ nnoremap <C-n> :tabp<CR>
 nnoremap <C-l> :ls<CR>:buffer
 
 " neocomplcache edit snippets
-nnoremap :es    :NeoComplCacheEditSnippets<CR>
+nnoremap :es    :NeoComplCache
+
 
 "-------------------------------------------
 " neocmplcache
@@ -191,11 +190,4 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=30
 
 " Ref
-
-" surround.vim
-let mapleader=","
-nmap <leader>q<Plug>Csurround w"
-imap <leader>q<Esc><Plug>Csurround w"<Right>wa
-nmap <leader>sq<Plug>Csurround w'
-imap <leader>sq<Esc><Plug>Csurround w'<Right>wa
 
