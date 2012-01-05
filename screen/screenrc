@@ -1,0 +1,41 @@
+escape ^]]
+#escape ^Ta
+#escape z
+defutf8 on
+defencoding UTF-8
+encoding UTF-8 UTF-8
+#defencoding EUC-JP
+#encoding EUC-JP EUC-JP
+hardstatus alwayslastline "[%m/%d %0c] %0`%-w%{= bW}%n %t%{-}%+w"
+defscrollback 1000
+shell -$SHELL
+shelltitle "\$ |\$ "
+vbell off
+startup_message off
+term xterm-256color
+defbce on
+termcapinfo xterm-256color 'is=\E[!p\E[?4l\E[4l\E>'
+attrcolor b ".I"
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#multiuser on
+#acladd kan
+#aclchg kan +rwx "#?"
+
+autodetach on
+
+# ↓バインドが上書きされたくさいので再設定
+bind 1 select 1
+bind 2 select 2
+bind 0 select 0
+bind q
+
+# x のロックを無効
+bind ^x
+
+# Emacsライクなウィンドウ分割
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind ^x command -c REGION
+
