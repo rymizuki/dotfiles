@@ -144,22 +144,9 @@ setopt ignore_eof
 setopt NO_flow_control
 setopt NO_hup
 
-
-# TODO 外部ファイル
-source ~/.mf.zshrc
-
-# perlbrew
-source ~/perl5/perlbrew/etc/bashrc
-
-# 関数
-function szsh_all () {
-    source ~/.mf.zshrc    
-}
-
-function rmswap() {
-    rm ~/.vim/vimbackup/$*.*
-    print "削除しました"
-}
+if [[ -n "${SLEDGE_CONFIG_NAME}" ]]; then  
+    source ~/.mf.zshrc
+fi
 
 function t() {
     tmux new-window "$*"
