@@ -21,7 +21,7 @@ if [[ $UID = 0 ]]; then
     color="38;5;183"
 fi
 
-PROMPT="%{[${color}m%}$paren[1]%n:%~$paren[2]%(!.#.$)%{[0m%} "
+PROMPT="%{[${color}m%}$paren[1]%n$paren[2]%(!.#.$)%{[0m%} "
 
 if [[ -n "$WINDOW" ]]; then
     preexec() {
@@ -34,27 +34,6 @@ if [[ -n "$WINDOW" ]]; then
         echo -n "\ek$cwd:t/\e\\"
     }
 fi
-
-# - git branch on prompt
-_set_env_git_current_branch() {
-    GIT_CURRENT_BRANCH=$( git branch &> /dev/null | grep '^\*' | cut -b 3- )
-}
-
-_update_rprompt () {
-    RPROMPT="[Git:$GIT_CURRENT_BRANCH]"
-}
-
-precmd()
-{
-    _set_env_git_current_branch
-    _update_rprompt
-}
-
-chpwd()
-{
-    _set_env_git_current_branch
-    _update_rprompt
-}
 
 # =======================================================================
 # history
@@ -69,7 +48,6 @@ setopt hist_ignore_space
 setopt hist_no_store
 setopt hist_reduce_blanks
 setopt hist_save_no_dups
-#setopt share_history
 
 bindkey -e
 
@@ -118,28 +96,22 @@ zstyle ':completion:*:cd:*' tag-order local-direcories path-directories
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# _cache_hosts=(`sed -ne 's/,.*//p' ~/.ssh/known_hosts`)
-
-
 
 # =======================================================================
 # cd, ls
 # -----------------------------------------------------------------------
-
 setopt auto_cd
 setopt auto_pushd
 
 # =======================================================================
 # process
 # -----------------------------------------------------------------------
-
 setopt auto_resume
 setopt magic_equal_subst
 
 # =======================================================================
 # keyboard
 # -----------------------------------------------------------------------
-
 setopt ignore_eof
 setopt NO_flow_control
 setopt NO_hup
@@ -156,47 +128,5 @@ function workslog() {
     vi ~/worksLog/`date +%y`-`date +%m%d`.txt
 }
 
-# =======================================================================
-# alias -- zhsrc
-# -----------------------------------------------------------------------
-
-# vi
-alias vvim="vi ~/.vimrc"
-alias vzsh="vi ~/.zshrc"
-alias vtmux="vi ~/.tmux.conf"
-
-# source
-alias szsh="source ~/.zshrc"
-alias svim="source ~/.vimrc"
-alias stmux="source ~/.tmux.conf"
-
-# screen
-alias s="screen -U"
-
-# tmux
-alias tt="tmux -2 new-session"
-alias tr="tmux attach-session"
-alias tv="tmux new-window vim"
-
-# commands
-alias ls='ls --color=auto'
-alias la='ls -la'
-alias ll="ls -l"
-#eval `dircolors -b ~/etc/dircolors.conf`
-
-alias vi="vim"
-alias datetime="perl -e 'print localtime . qq{\n}'"
-alias pm="perldoc -m"
-
-# パイプ系
-alias -g L="| lv"
-alias -g T="| tail"
-alias -g H="| head"
-alias -g G="| grep"
-alias -g W="| wc"
-
-# Git
-alias -g gc="git checkout"
-alias -g gb="git branch"
-
-
+source "${HOME}/.zsh/alias.zsh"
+source "${HOME}/.zsh/git_prompt.zsh"
