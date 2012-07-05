@@ -16,11 +16,12 @@ Bundle 'The-NERD-tree'
 Bundle 'unite-colorscheme'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell'
 Bundle 'othree/html5.vim'
 Bundle 'takuji31/xslate-vim'
-
+Bundle 'mattn/zencoding-vim'
 
 "-------------------------------------------
 " 基本設定
@@ -35,9 +36,9 @@ set ambiwidth=double
 
 " syntax
 syntax enable
-colorscheme delek
+"colorscheme delek
 "colorscheme Light
-"colorscheme darkblue 
+colorscheme darkblue 
 
 " filetype
 filetype on
@@ -56,9 +57,11 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
+set ambiwidth=double
 set showcmd
 set showmode
 set showmatch
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set ruler
 set nobackup
 set hlsearch        " highlight

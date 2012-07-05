@@ -3,7 +3,7 @@ snippet     pscript
     #!/usr/bin/env perl
     use strict;
     use warnings;
-    use 5.10.0;
+    use 5.010_000;
 
 snippet     ps12
     #!/usr/bin/env perl
@@ -19,7 +19,7 @@ snippet     pkg
     package ${1};
     use strict;
     use warnings;
-    use 5.10.0;
+    use 5.010_000;
 
 snippet     pkg12
     package ${1};
@@ -37,7 +37,7 @@ snippet     pkg14
 snippet     strict
     use strict;
     use warnings;
-    use 5.10.0;
+    use 5.010_000;
 
 snippet     str12
     use 5.12.0;
@@ -67,26 +67,26 @@ snippet     ssub
 
 snippet     vsub
     sub ${1} {
-        state $v = Data::Validator->new(
+        state $validator = Data::Validator->new(
             ${2}
         )->with(qw/Method${3}/);
-        my ($${4:class}, $args) = $v->validate(@_);
+        my ($${4:class}, $args) = $validator->validate(@_);
         ${5}
     }
 
 snippet     vfsub
     sub ${1} {
-        state $v = Data::Validator->new(
+        state $validator = Data::Validator->new(
             ${2}
         )${3:->with(qw/${4\}/)};
-        my $args = $v->validate(@_);
+        my $args = $validator->validate(@_);
         ${5}
     }
 snippet     dv
-        state $v = Data::Validator->new(
+        state $validator = Data::Validator->new(
             ${1}
         )->with(qw/Method${2}/);
-        my ($${3:class}, $args) = $v->validate(@_);
+        my ($${3:class}, $args) = $validator->validate(@_);
     }
 
 snippet     fdv
