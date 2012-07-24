@@ -87,7 +87,11 @@ setopt complete_aliases
 autoload -Uz compinit
 compinit -u
 
-eval `dircolors`
+if [ $(uname) = 'Darwin' ]; then
+    # 何を入れればいいんだ
+else
+    eval `dircolors`
+fi
 zstyle ':completion:*:default' listo-colors ${LS_COLORS}
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*:default:' menu select=1

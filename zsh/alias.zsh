@@ -21,7 +21,11 @@ alias tr="tmux attach-session"
 alias tv="tmux new-window vim"
 
 # commands
-alias ls='ls --color=auto'
+if [ $(uname) = 'Darwin' ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
 alias la='ls -la'
 alias ll="ls -l"
 #eval `dircolors -b ~/etc/dircolors.conf`
