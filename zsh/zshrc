@@ -132,5 +132,7 @@ function workslog() {
     vi ~/worksLog/`date +%y`-`date +%m%d`.txt
 }
 
+export EDITOR='vim'
+
 source "${HOME}/.zsh/alias.zsh"
 source "${HOME}/.zsh/git_prompt.zsh"
