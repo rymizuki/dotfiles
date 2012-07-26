@@ -16,9 +16,9 @@ alias stmux="source ~/.tmux.conf"
 alias s="screen -U"
 
 # tmux
-alias tt="tmux -2 new-session"
-alias tr="tmux attach-session"
-alias tv="tmux new-window vim"
+alias tt="tmux -u -2 new-session"
+alias tr="tmux -u attach-session"
+alias tv="tmux -u new-window vim"
 
 # commands
 if [ $(uname) = 'Darwin' ]; then
