@@ -132,7 +132,14 @@ function workslog() {
     vi ~/worksLog/`date +%y`-`date +%m%d`.txt
 }
 
+export LANG="ja_JP"
 export EDITOR='vim'
+export PERLBREW_ROOT=~/.perlbrew
+if [ $(uname) = 'Darwin' ]; then
+    # いまんところMAC環境だけなので
+    export PATH=$HOME/bin:$PATH
+    source "${HOME}/.perlbrew/etc/bashrc"
+fi
 
 source "${HOME}/.zsh/alias.zsh"
 source "${HOME}/.zsh/git_prompt.zsh"
