@@ -120,10 +120,6 @@ setopt ignore_eof
 setopt NO_flow_control
 setopt NO_hup
 
-if [[ -n "${SLEDGE_CONFIG_NAME}" ]]; then  
-    source ~/.mf.zshrc
-fi
-
 function t() {
     tmux -u new-window "$*"
 }
@@ -132,14 +128,12 @@ function workslog() {
     vi ~/worksLog/`date +%y`-`date +%m%d`.txt
 }
 
-export LANG="ja_JP.UTF-8"
-export EDITOR='vim'
-export PERLBREW_ROOT=~/.perlbrew
 if [ $(uname) = 'Darwin' ]; then
     # いまんところMAC環境だけなので
-    export PATH=$HOME/bin:$PATH
     source "${HOME}/.perlbrew/etc/bashrc"
 fi
 
+# SOURCE FILES
+source "${HOME}/.zsh/export.zsh"
 source "${HOME}/.zsh/alias.zsh"
 source "${HOME}/.zsh/git_prompt.zsh"
