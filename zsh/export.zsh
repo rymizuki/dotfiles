@@ -7,6 +7,6 @@ if [ $(uname) = 'Darwin' ]; then
     export PATH=$HOME/bin:$PATH
 fi
 
-if [ ${DEV_PLACE_ID} = 'rym' ]; then
+if [[ $DEV_PLACE_ID = 'rym' ]]; then
     export PATH=/var/lib/gems/1.8/bin:$PATH
 fi
