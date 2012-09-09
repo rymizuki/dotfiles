@@ -34,6 +34,7 @@ au BufNewFile,BufRead *.zshrc   set filetype=zsh
 au BufNewFile,BufRead *.psgi    set filetype=perl
 au BufNewFile,BufRead *.t       set filetype=perl
 au BufNewFile,BufRead *.scss    set filetype=scss
+au BufNewFile,BufRead *.tx      set filetype=xslate
 
 
 setlocal omnifunc=syntaxcomplete#Complete

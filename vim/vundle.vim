@@ -14,7 +14,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5.vim'
-Bundle 'takuji31/xslate-vim'
+Bundle 'motemen/xslate-vim'
 Bundle 'mattn/zencoding-vim'
 
 
