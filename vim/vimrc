@@ -10,21 +10,6 @@ filetype off
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
-Bundle 'ref.vim'
-Bundle 'surround.vim'
-Bundle 'The-NERD-tree'
-Bundle 'unite-colorscheme'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'othree/html5.vim'
-Bundle 'takuji31/xslate-vim'
-Bundle 'mattn/zencoding-vim'
-
 "-------------------------------------------
 " 基本設定
 "-------------------------------------------
@@ -166,6 +151,10 @@ nnoremap <C-l> :ls<CR>:buffer
 
 "
 " LoadPluginsConfig
+
+if filereadable(expand('~/.vim/vundle.vim'))
+    source ~/.vim/vundle.vim
+endif
 
 " NeoComplCache 
 if filereadable(expand('~/.vim/neocomplcache.vim'))
