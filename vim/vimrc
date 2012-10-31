@@ -157,6 +157,11 @@ if filereadable(expand('~/.vim/vundle.vim'))
     source ~/.vim/vundle.vim
 endif
 
+" Align
+if filereadable(expand('~/.vim/align.vim'))
+    source ~/.vim/align.vim
+endif
+
 " NeoComplCache 
 if filereadable(expand('~/.vim/neocomplcache.vim'))
     source ~/.vim/neocomplcache.vim

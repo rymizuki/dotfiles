@@ -16,5 +16,4 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5.vim'
 Bundle 'motemen/xslate-vim'
 Bundle 'mattn/zencoding-vim'
-
-
+Bundle 'vim-scripts/Align'
