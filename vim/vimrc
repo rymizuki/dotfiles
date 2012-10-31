@@ -162,6 +162,11 @@ if filereadable(expand('~/.vim/neocomplcache.vim'))
     source ~/.vim/neocomplcache.vim
 endif
 
+" NeoSnippet
+if filereadable(expand('~/.vim/neosnippet.vim'))
+    source ~/.vim/neosnippet.vim
+endif
+
 " NERDTree
 if filereadable(expand('~/.vim/nerdtree.vim'))
     source ~/.vim/nerdtree.vim

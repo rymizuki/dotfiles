@@ -2,9 +2,6 @@
 " neocmplcache
 "-------------------------------------------
 
-" neocomplcache edit snippets
-nnoremap :es    :NeoComplCacheEditSnippets<CR>
-
 " neocmplcache let
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
@@ -13,11 +10,8 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_lock_buffer_name_pattern = "*ku*"
-let g:neocomplcache_snippets_dir = "~/.vim/snippets/"
 
 " Plugin key-mappings.
-imap <C-k>  <Plug>(neocomplcache_snippets_expand)
-smap <C-k>  <Plug>(neocomplcache_snippets_expand)
 inoremap    <expr><C-g> neocomplcache#undo_completion()
 inoremap    <expr><C-l> neocomplcache#complete_common_string()
 
