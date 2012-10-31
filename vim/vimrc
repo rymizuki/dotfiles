@@ -35,7 +35,7 @@ au BufNewFile,BufRead *.psgi    set filetype=perl
 au BufNewFile,BufRead *.t       set filetype=perl
 au BufNewFile,BufRead *.scss    set filetype=scss
 au BufNewFile,BufRead *.tx      set filetype=xslate
-
+au BufNewFile,BufRead *.html    set filetype=xslate
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
