@@ -128,9 +128,8 @@ function workslog() {
     vi ~/worksLog/`date +%y`-`date +%m%d`.txt
 }
 
-if [ $(uname) = 'Darwin' ]; then
-    # いまんところMAC環境だけなので
-    source "${HOME}/.perlbrew/etc/bashrc"
+if [ -f $HOME/.perlbrew/etc/bashrc ]; then
+    source $HOME/.perlbrew/etc/bashrc
 fi
 
 # SOURCE FILES
