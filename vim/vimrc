@@ -36,11 +36,16 @@ au BufNewFile,BufRead *.t       set filetype=perl
 au BufNewFile,BufRead *.scss    set filetype=scss
 au BufNewFile,BufRead *.tx      set filetype=xslate
 au BufNewFile,BufRead *.html    set filetype=xslate
+au BufNewFile,BufRead *.md      set filetype=markdown
+au BufNewFile,BufRead *.coffee  set filetype=coffee
+au BufNewFile,BufRead *.json    set filetype=javascript
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css  set omnifunc=csscomplete#CompleteCSS
 autocmd FileType yaml set sw=2 ts=2
+autocmd FileType javascript set sw=2 ts=2
+autocmd FileType coffee     set sw=2 ts=2
 
 set ts=4
 set shiftwidth=4
@@ -139,6 +144,8 @@ inoremap <: <:  :><LEFT><LEFT><LEFT>
 " PHP
 inoremap <?= <?= ?><LEFT><LEFT><LEFT>
 inoremap <? <?  ?><LEFT><LEFT><LEFT>
+" js
+inoremap <% <% %><LEFT><LEFT><LEFT>
 " カーソル操作
 inoremap <C-b> <LEFT>
 inoremap <C-f> <RIGHT>
