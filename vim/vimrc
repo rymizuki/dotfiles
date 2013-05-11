@@ -164,6 +164,11 @@ if filereadable(expand('~/.vim/vundle.vim'))
     source ~/.vim/vundle.vim
 endif
 
+" VimFiler
+if filereadable(expand('~/.vim/vimfiler.vim'))
+    source ~/.vim/vimfiler.vim
+endif
+
 " Align
 if filereadable(expand('~/.vim/align.vim'))
     source ~/.vim/align.vim
