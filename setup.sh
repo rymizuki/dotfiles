@@ -13,3 +13,8 @@ fi
 ln -sf ${DOT_FILE_DIR}/tmux/tmux.conf ~/.tmux.conf
 ln -sf ${DOT_FILE_DIR}/screen/screenrc ~/.screenrc
 
+git submodule init
+git submodule update
+
+echo "setup dotfiles complete."
+echo "Start vim, let perform the 'BundleInstall!"
