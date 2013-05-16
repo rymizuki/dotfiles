@@ -126,41 +126,41 @@ nnoremap <C-l> :ls<CR>:buffer
 "
 " LoadPluginsConfig
 
-if filereadable(expand('~/.vim/vundle.vim'))
-    source ~/.vim/vundle.vim
+if filereadable(expand('~/.vim/plugins/vundle.vim'))
+    source ~/.vim/plugins/vundle.vim
 endif
 
 " VimFiler
-if filereadable(expand('~/.vim/vimfiler.vim'))
-    source ~/.vim/vimfiler.vim
+if filereadable(expand('~/.vim/plugins/vimfiler.vim'))
+    source ~/.vim/plugins/vimfiler.vim
 endif
 
 " Align
-if filereadable(expand('~/.vim/align.vim'))
-    source ~/.vim/align.vim
+if filereadable(expand('~/.vim/plugins/align.vim'))
+    source ~/.vim/plugins/align.vim
 endif
 
 " NeoComplCache 
-if filereadable(expand('~/.vim/neocomplcache.vim'))
-    source ~/.vim/neocomplcache.vim
+if filereadable(expand('~/.vim/plugins/neocomplcache.vim'))
+    source ~/.vim/plugins/neocomplcache.vim
 endif
 
 " NeoSnippet
-if filereadable(expand('~/.vim/neosnippet.vim'))
-    source ~/.vim/neosnippet.vim
+if filereadable(expand('~/.vim/plugins/neosnippet.vim'))
+    source ~/.vim/plugins/neosnippet.vim
 endif
 
 " NERDTree
-if filereadable(expand('~/.vim/nerdtree.vim'))
-    source ~/.vim/nerdtree.vim
+if filereadable(expand('~/.vim/plugins/nerdtree.vim'))
+    source ~/.vim/plugins/nerdtree.vim
 endif
 
 " surround.vim
-if filereadable(expand('~/.vim/surround.vim'))
-    source ~/.vim/surround.vim
+if filereadable(expand('~/.vim/plugins/surround.vim'))
+    source ~/.vim/plugins/surround.vim
 endif
 
 " ZenCoding
-if filereadable(expand('~/.vim/zencoding.vim'))
-    source ~/.vim/zencoding.vim
+if filereadable(expand('~/.vim/plugins/zencoding.vim'))
+    source ~/.vim/plugins/zencoding.vim
 endif
