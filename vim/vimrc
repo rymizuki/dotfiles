@@ -3,12 +3,15 @@
 "
 
 "-------------------------------------------
-" Vandle
+" NeoBundle
 "-------------------------------------------
-filetype off
+set nocompatible " Be iMproved
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+if has('vim_starting')
+    set runtimepath+=~/.vim/neobundle.vim.git/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 "-------------------------------------------
 " 基本設定
@@ -126,8 +129,8 @@ nnoremap <C-l> :ls<CR>:buffer
 "
 " LoadPluginsConfig
 
-if filereadable(expand('~/.vim/plugins/vundle.vim'))
-    source ~/.vim/plugins/vundle.vim
+if filereadable(expand('~/.vim/plugins/neobundle.vim'))
+    source ~/.vim/plugins/neobundle.vim
 endif
 
 " VimFiler
