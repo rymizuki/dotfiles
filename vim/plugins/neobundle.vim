@@ -7,7 +7,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 " After install, trun shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc',      {
+        \ 'build': {
+        \     'windows': 'make -f make_mingw32.mak',
+        \     'cygwin':  'make -f make_cygwin.mak',
+        \     'mac':     'make -f make_mac.mak',
+        \     'unix':    'make -f make_unix.mak',
+        \ },
+    \}
 
 " My Bundles here:
 "
@@ -15,7 +22,6 @@ NeoBundle 'Shougo/vimproc'
 "
 " plugins
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 
@@ -33,6 +39,7 @@ NeoBundle 'elzr/vim-json'
 
 " plugins for git
 NeoBundle 'kmnk/vim-unite-giti', {'depends': ['Shougo/unite.vim']}
+NeoBundle 'sgur/unite-git_grep', {'depends': ['Shougo/unite.vim']}
 
 " plugins for Perl
 NeoBundle 'motemen/xslate-vim'
