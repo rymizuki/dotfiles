@@ -24,6 +24,7 @@ NeoBundle 'Shougo/vimproc',      {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
+NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 
 " plugins for colors.
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
@@ -42,6 +43,7 @@ NeoBundle 'kmnk/vim-unite-giti', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'sgur/unite-git_grep', {'depends': ['Shougo/unite.vim']}
 
 " plugins for Perl
+NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'motemen/xslate-vim'
 NeoBundle 'y-uuki/unite-perl-module.vim', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'y-uuki/perl-local-lib-path.vim'
@@ -59,6 +61,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'scrooloose/syntastic'
+
+" plugins for varnish
+NeoBundle 'https://github.com/empanda/vim-varnish.git'
 
 " Installation check.
 filetype plugin indent on " Required!

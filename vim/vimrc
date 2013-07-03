@@ -167,3 +167,8 @@ endif
 if filereadable(expand('~/.vim/plugins/zencoding.vim'))
     source ~/.vim/plugins/zencoding.vim
 endif
+
+" perl-local-lib-path
+if filereadable(expand('~/.vim/plugins/perl-local-lib-path.vim'))
+    source ~/.vim/plugins/perl-local-lib-path.vim
+endif
