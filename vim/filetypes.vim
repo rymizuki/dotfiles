@@ -13,6 +13,7 @@ au BufNewFile,BufRead *.json    set filetype=javascript
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
+autocmd FileType xslate     set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css        set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType scss       set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType yaml       set sw=2 ts=2
