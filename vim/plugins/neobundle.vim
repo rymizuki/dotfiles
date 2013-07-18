@@ -28,7 +28,7 @@ NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 
 " plugins for colors.
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
-NeoBundle 'scrooloose/syntastic'
+
 
 " plugins for coding.
 NeoBundle 'Shougo/neocomplcache'
@@ -37,6 +37,8 @@ NeoBundle 'ref.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'scrooloose/syntastic', {'depnds': ['pope/vim-pathogen']}
 
 " plugins for git
 NeoBundle 'kmnk/vim-unite-giti', {'depends': ['Shougo/unite.vim']}
@@ -61,7 +63,6 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'teramako/jscomplete-vim'
-NeoBundle 'scrooloose/syntastic'
 
 " plugins for varnish
 NeoBundle 'https://github.com/empanda/vim-varnish.git'
