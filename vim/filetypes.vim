@@ -3,6 +3,7 @@ filetype on
 filetype indent on
 au BufNewFile,BufRead *.zshrc   set filetype=zsh
 au BufNewFile,BufRead *.psgi    set filetype=perl
+au BufNewFile,BufRead cpanfile  set filetype=perl
 au BufNewFile,BufRead *.t       set filetype=perl
 au BufNewFile,BufRead *.scss    set filetype=scss
 au BufNewFile,BufRead *.tx      set filetype=xslate
@@ -10,6 +11,7 @@ au BufNewFile,BufRead *.html    set filetype=xslate
 au BufNewFile,BufRead *.md      set filetype=markdown
 au BufNewFile,BufRead *.coffee  set filetype=coffee
 au BufNewFile,BufRead *.json    set filetype=javascript
+au BufNewFile,BufRead *.vcl     set filetype=vcl
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
