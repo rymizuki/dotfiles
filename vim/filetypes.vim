@@ -14,7 +14,7 @@ au BufNewFile,BufRead *.json    set filetype=javascript
 au BufNewFile,BufRead *.vcl     set filetype=vcl
 
 setlocal omnifunc=syntaxcomplete#Complete
-autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags foldmethod=indent foldlevel=3
 autocmd FileType xslate     set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css        set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType scss       set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
