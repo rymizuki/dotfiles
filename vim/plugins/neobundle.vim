@@ -52,6 +52,7 @@ NeoBundle 'y-uuki/perl-local-lib-path.vim'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'othree/xml.vim'
 
 " plugins for CSS
 NeoBundle 'hail2u/vim-css3-syntax'
