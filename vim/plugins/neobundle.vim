@@ -26,9 +26,23 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 
-" plugins for colors.
-NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
+" plugins for syntax
+NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'cespare/vim-toml'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'empanda/vim-varnish.git'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'motemen/xslate-vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'othree/xml.vim'
+NeoBundle 'tpope/vim-haml'
+
+" plugins for color
+NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
 
 " plugins for coding.
 NeoBundle 'Shougo/neocomplcache'
@@ -36,36 +50,21 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'ref.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'vim-scripts/Align'
-NeoBundle 'elzr/vim-json'
 
 " plugins for git
 NeoBundle 'kmnk/vim-unite-giti', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'sgur/unite-git_grep', {'depends': ['Shougo/unite.vim']}
 
 " plugins for Perl
-NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'motemen/xslate-vim'
 NeoBundle 'y-uuki/unite-perl-module.vim', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'y-uuki/perl-local-lib-path.vim'
 
 " plugins for HTML
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'othree/xml.vim'
-
-" plugins for CSS
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'mattn/emmet-vim'
 
 " plugins for JavaScript
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'scrooloose/syntastic'
-
-" plugins for varnish
-NeoBundle 'https://github.com/empanda/vim-varnish.git'
 
 " Installation check.
 filetype plugin indent on " Required!

@@ -172,3 +172,5 @@ endif
 if filereadable(expand('~/.vim/plugins/perl-local-lib-path.vim'))
     source ~/.vim/plugins/perl-local-lib-path.vim
 endif
+
+let g:syntastic_perl_lib_path = "local/lib"
