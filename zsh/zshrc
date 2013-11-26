@@ -21,7 +21,7 @@ if [[ $UID = 0 ]]; then
     color="38;5;183"
 fi
 
-PROMPT="%{[${color}m%}$paren[1]%n$paren[2]%(!.#.$)%{[0m%} "
+PROMPT="%{[${color}m%}$paren[1]%n@%m$paren[2]%(!.#.$)%{[0m%} "
 
 if [[ -n "$WINDOW" ]]; then
     preexec() {
@@ -136,3 +136,6 @@ fi
 source "${HOME}/.zsh/export.zsh"
 source "${HOME}/.zsh/alias.zsh"
 source "${HOME}/.zsh/git_prompt.zsh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
