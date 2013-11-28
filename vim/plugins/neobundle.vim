@@ -1,6 +1,6 @@
-"------------------------------------------- 
-" neobundle.vim's BundleList                    
-"------------------------------------------- 
+"-------------------------------------------
+" neobundle.vim's BundleList
+"-------------------------------------------
 
 " Let NeBundle manage NeBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -26,6 +26,9 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 
+" plugins for term
+NeoBundle 'Lokaltog/powerline'
+
 " plugins for syntax
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'scrooloose/syntastic'
@@ -43,6 +46,8 @@ NeoBundle 'tpope/vim-haml'
 
 " plugins for color
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
+NeoBundle 'cocopon/colorswatch.vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 " plugins for coding.
 NeoBundle 'Shougo/neocomplcache'
@@ -50,6 +55,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'ref.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'vim-scripts/Align'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " plugins for git
 NeoBundle 'kmnk/vim-unite-giti', {'depends': ['Shougo/unite.vim']}

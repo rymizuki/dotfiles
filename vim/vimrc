@@ -26,9 +26,6 @@ set ambiwidth=double
 
 " syntax
 syntax enable
-"colorscheme delek
-"colorscheme Light
-colorscheme darkblue 
 
 " filetype
 if filereadable(expand('~/.vim/filetypes.vim'))
@@ -44,6 +41,7 @@ set ambiwidth=double
 set showcmd
 set showmode
 set showmatch
+set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set ruler
 set nobackup
@@ -173,4 +171,17 @@ if filereadable(expand('~/.vim/plugins/perl-local-lib-path.vim'))
     source ~/.vim/plugins/perl-local-lib-path.vim
 endif
 
-let g:syntastic_perl_lib_path = "local/lib"
+" TODO
+" for indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = &tabstop
+let g:indent_guides_auto_colors = 1
+" colorscheme hybrid に合わせて調整している
+hi IndentGuidesEven ctermbg=238
+hi IndentGuidesOdd  ctermbg=234
+
+" for powerline
+let g:Powerline_symbols = 'fancy'
+
+colorscheme hybrid
