@@ -27,7 +27,8 @@ NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 
 " plugins for term
-NeoBundle 'Lokaltog/powerline'
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 
 " plugins for syntax
 NeoBundle 'vim-perl/vim-perl'
@@ -69,7 +70,6 @@ NeoBundle 'y-uuki/perl-local-lib-path.vim'
 NeoBundle 'mattn/emmet-vim'
 
 " plugins for JavaScript
-NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'scrooloose/syntastic'
 
 " Installation check.
