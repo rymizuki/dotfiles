@@ -25,6 +25,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " plugins for term
 NeoBundle 'Lokaltog/powerline'
@@ -70,6 +71,9 @@ NeoBundle 'mattn/emmet-vim'
 
 " plugins for JavaScript
 NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'nono/vim-handlebars'
 
 " Installation check.
 filetype plugin indent on " Required!
