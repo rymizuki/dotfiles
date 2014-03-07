@@ -106,6 +106,7 @@ inoremap '' ''<LEFT>
 inoremap <> <><LEFT>
 " perl TT
 inoremap [% [%  %]<LEFT><LEFT><LEFT>
+inoremap [%- [%-  -%]<LEFT><LEFT><LEFT><LEFT>
 " perl TX::Syntax::Kolon
 inoremap <: <:  :><LEFT><LEFT><LEFT>
 " PHP
