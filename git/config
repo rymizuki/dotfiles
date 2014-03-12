@@ -1,0 +1,13 @@
+[include]
+    path = .gitconfig.local
+[core]
+    editor = vim
+    excludesfile = .gitignore
+    pager = less -r
+[color]
+    ui = always
+    branch = auto
+    diff = auto
+    status = auto
+[github]
+    user = rymizuki
