@@ -27,6 +27,7 @@ NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'vim-scripts/FuzzyFinder', {'depends': ['vim-scripts/L9']}
 
 " plugins for term
 NeoBundle 'Lokaltog/powerline'
