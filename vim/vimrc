@@ -127,6 +127,11 @@ if filereadable(expand('~/.vim/plugins/neobundle.vim'))
     source ~/.vim/plugins/neobundle.vim
 endif
 
+" FuzzyFiinder
+if filereadable(expand('~/.vim/plugins/unite.vim'))
+    source ~/.vim/plugins/unite.vim
+endif
+
 " VimFiler
 if filereadable(expand('~/.vim/plugins/vimfiler.vim'))
     source ~/.vim/plugins/vimfiler.vim
