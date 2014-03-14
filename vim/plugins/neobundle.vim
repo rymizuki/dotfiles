@@ -26,6 +26,8 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler',     {'depends': ['Shougo/unite.vim']}
 NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'vim-scripts/FuzzyFinder', {'depends': ['vim-scripts/L9']}
 
 " plugins for term
 NeoBundle 'alpaca-tc/alpaca_powertabline'
@@ -45,6 +47,8 @@ NeoBundle 'motemen/xslate-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/xml.vim'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'groenewege/vim-less'
 
 " plugins for color
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}

@@ -53,7 +53,7 @@ bindkey -e
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
-SAVEHIST=100000
+SAVEHIST=10000
 LISTMAX=1000
 
 if [[ $UID = 0 ]]; then
@@ -124,14 +124,6 @@ function t() {
     tmux -u new-window "$*"
 }
 
-function workslog() {
-    vi ~/worksLog/`date +%y`-`date +%m%d`.txt
-}
-
-if [ -f $HOME/.perlbrew/etc/bashrc ]; then
-    source $HOME/.perlbrew/etc/bashrc
-fi
-
 # SOURCE FILES
 source "${HOME}/.zsh/export.zsh"
 source "${HOME}/.zsh/alias.zsh"
@@ -139,3 +131,6 @@ source "${HOME}/.zsh/git_prompt.zsh"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/iinuma/.gvm/bin/gvm-init.sh" ]] && source "/Users/iinuma/.gvm/bin/gvm-init.sh"

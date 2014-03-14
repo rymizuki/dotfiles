@@ -86,11 +86,6 @@ function MyTabLabel(n)
     return bufname(buflist[winnr - 1]) 
 endfunction
 
-" tabcolor
-hi TabLine     term=reverse cterm=reverse ctermfg=white ctermbg=black
-hi TabLineSel  term=bold cterm=bold,underline ctermfg=9
-hi TabLineFill term=reverse cterm=reverse ctermfg=white ctermbg=black
-
 " show git status
 if filereadable(expand('~/.vim/git_status.vim'))
     source ~/.vim/git_status.vim
@@ -106,6 +101,7 @@ inoremap '' ''<LEFT>
 inoremap <> <><LEFT>
 " perl TT
 inoremap [% [%  %]<LEFT><LEFT><LEFT>
+inoremap [%- [%-  -%]<LEFT><LEFT><LEFT><LEFT>
 " perl TX::Syntax::Kolon
 inoremap <: <:  :><LEFT><LEFT><LEFT>
 " PHP
@@ -131,6 +127,11 @@ if filereadable(expand('~/.vim/plugins/neobundle.vim'))
     source ~/.vim/plugins/neobundle.vim
 endif
 
+" FuzzyFiinder
+if filereadable(expand('~/.vim/plugins/unite.vim'))
+    source ~/.vim/plugins/unite.vim
+endif
+
 " VimFiler
 if filereadable(expand('~/.vim/plugins/vimfiler.vim'))
     source ~/.vim/plugins/vimfiler.vim
@@ -151,24 +152,9 @@ if filereadable(expand('~/.vim/plugins/neosnippet.vim'))
     source ~/.vim/plugins/neosnippet.vim
 endif
 
-" NERDTree
-if filereadable(expand('~/.vim/plugins/nerdtree.vim'))
-    source ~/.vim/plugins/nerdtree.vim
-endif
-
-" surround.vim
-if filereadable(expand('~/.vim/plugins/surround.vim'))
-    source ~/.vim/plugins/surround.vim
-endif
-
-" ZenCoding
-if filereadable(expand('~/.vim/plugins/zencoding.vim'))
-    source ~/.vim/plugins/zencoding.vim
-endif
-
-" perl-local-lib-path
-if filereadable(expand('~/.vim/plugins/perl-local-lib-path.vim'))
-    source ~/.vim/plugins/perl-local-lib-path.vim
+" FuzzyFiinder
+if filereadable(expand('~/.vim/plugins/fuzzy_finder.vim'))
+    source ~/.vim/plugins/fuzzy_finder.vim
 endif
 
 " TODO

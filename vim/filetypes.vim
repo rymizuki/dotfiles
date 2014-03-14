@@ -11,15 +11,18 @@ au BufNewFile,BufRead *.html    set filetype=xslate
 au BufNewFile,BufRead *.md      set filetype=markdown
 au BufNewFile,BufRead *.coffee  set filetype=coffee
 au BufNewFile,BufRead *.json    set filetype=javascript
+au BufNewFile,BufRead Gruntfile set filetype=javascript
 au BufNewFile,BufRead *.vcl     set filetype=vcl
 au BufNewFIle,BufRead *.haml    set filetype=haml
 au BufNewFIle,BufRead *.toml    set filetype=toml
 au BufNewFile,BufRead *.hbs     set filetype=handlebars
 au BufNewFile,BufRead *.ts      set filetype=typescript
+au BufNewFile,BufRead *.jade    set filetype=jade
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType haml       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
+autocmd FileType jade       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xslate     set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css        set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType scss       set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS

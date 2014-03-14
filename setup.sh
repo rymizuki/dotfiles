@@ -1,5 +1,9 @@
 
 DOT_FILE_DIR=${HOME}/project/dotfiles
+if [ ! -e ~/.git ]; then
+    ln -s ${DOT_FILE_DIR}/git/ ~/.git
+    ln -sf ~/.git/config ~/.gitconfig
+fi
 if [ ! -e ~/.zsh ]; then
     ln -s ${DOT_FILE_DIR}/zsh/ ~/.zsh
     ln -sf ~/.zsh/zshrc ~/.zshrc
