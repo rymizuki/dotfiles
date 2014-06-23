@@ -79,6 +79,9 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'nono/vim-handlebars'
 
+" plugins for Evernote
+NeoBundle 'kakkyz81/evervim'
+
 " Installation check.
 filetype plugin indent on " Required!
 NeoBundleCheck

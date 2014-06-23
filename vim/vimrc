@@ -157,6 +157,11 @@ if filereadable(expand('~/.vim/plugins/fuzzy_finder.vim'))
     source ~/.vim/plugins/fuzzy_finder.vim
 endif
 
+" evervim
+if filereadable(expand('~/.vim/plugins/evervim.vim'))
+    source ~/.vim/plugins/evervim.vim
+endif
+
 " TODO
 " for indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
