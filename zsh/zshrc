@@ -129,6 +129,9 @@ source "${HOME}/.zsh/export.zsh"
 source "${HOME}/.zsh/alias.zsh"
 source "${HOME}/.zsh/git_prompt.zsh"
 
+# call plugins
+source "${HOME}/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
