@@ -10,6 +10,7 @@ au BufNewFile,BufRead *.tx      set filetype=xslate
 au BufNewFile,BufRead *.html    set filetype=xslate
 au BufNewFile,BufRead *.md      set filetype=markdown
 au BufNewFile,BufRead *.coffee  set filetype=coffee
+au BufNewFile,BufRead *.cson    set filetype=coffee
 au BufNewFile,BufRead *.json    set filetype=javascript
 au BufNewFile,BufRead Gruntfile set filetype=javascript
 au BufNewFile,BufRead *.vcl     set filetype=vcl
