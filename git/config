@@ -11,3 +11,5 @@
     status = auto
 [github]
     user = rymizuki
+[push]
+	default = simple
