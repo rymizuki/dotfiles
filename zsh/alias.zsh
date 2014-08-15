@@ -45,3 +45,4 @@ alias -g W="| wc"
 alias -g gc="git checkout"
 alias -g gb="git branch"
 
+source ~/.zsh/alias/colordiff.zsh
