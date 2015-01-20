@@ -30,8 +30,8 @@ NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'vim-scripts/FuzzyFinder', {'depends': ['vim-scripts/L9']}
 
 " plugins for term
-NeoBundle 'alpaca-tc/alpaca_powertabline'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+" NeoBundle 'alpaca-tc/alpaca_powertabline'
+" NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 
 " plugins for syntax
 NeoBundle 'vim-perl/vim-perl'
