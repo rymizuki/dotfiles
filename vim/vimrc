@@ -93,12 +93,6 @@ endif
 
 " keymap
 nmap <ESC><ESC> :nohl<CR>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap <> <><LEFT>
 " perl TT
 inoremap [% [%  %]<LEFT><LEFT><LEFT>
 inoremap [%- [%-  -%]<LEFT><LEFT><LEFT><LEFT>
