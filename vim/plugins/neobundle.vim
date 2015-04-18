@@ -55,6 +55,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
 NeoBundle 'cocopon/colorswatch.vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'nanotech/jellybeans.vim'
 
 " plugins for coding.
 NeoBundle 'Shougo/neocomplcache'

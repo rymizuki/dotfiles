@@ -175,4 +175,4 @@ autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd  ctermbg=234
 " for powerline
 let g:Powerline_symbols = 'fancy'
 
-colorscheme hybrid
+colorscheme jellybeans
