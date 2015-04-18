@@ -13,3 +13,6 @@
     user = rymizuki
 [push]
 	default = simple
+[user]
+	name = mizuki_r
+	email = ry.mizuki@gmail.com
