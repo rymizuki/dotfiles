@@ -29,5 +29,5 @@ autocmd FileType css        set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType scss       set sw=2 ts=2 omnifunc=csscomplete#CompleteCSS
 autocmd FileType yaml       set sw=2 ts=2
 autocmd FileType coffee     set sw=2 ts=2
-autocmd FileType javascript set sw=4 ts=4
+autocmd FileType javascript set sw=2 ts=2
 autocmd FileType perl       set sw=4 ts=4
