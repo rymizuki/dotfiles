@@ -28,6 +28,7 @@ NeoBundle 'thinca/vim-unite-history', {'depends': ['Shougo/unite.vim']}
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'vim-scripts/FuzzyFinder', {'depends': ['vim-scripts/L9']}
+NeoBundle 'Townk/vim-autoclose'
 
 " plugins for term
 " NeoBundle 'alpaca-tc/alpaca_powertabline'
