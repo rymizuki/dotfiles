@@ -86,6 +86,10 @@ function MyTabLabel(n)
     return bufname(buflist[winnr - 1]) 
 endfunction
 
+" 単語の区切り
+set iskeyword-=-
+set iskeyword-=_
+
 " show git status
 if filereadable(expand('~/.vim/git_status.vim'))
     source ~/.vim/git_status.vim
