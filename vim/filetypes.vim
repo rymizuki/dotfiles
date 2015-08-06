@@ -20,6 +20,7 @@ au BufNewFIle,BufRead *.toml    set filetype=toml
 au BufNewFile,BufRead *.hbs     set filetype=handlebars
 au BufNewFile,BufRead *.ts      set filetype=typescript
 au BufNewFile,BufRead *.jade    set filetype=jade
+au BufNewFile,BufRead *.tag setlocal ft=javascript
 
 setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType html       set sw=2 ts=2 omnifunc=htmlcomplete#CompleteTags

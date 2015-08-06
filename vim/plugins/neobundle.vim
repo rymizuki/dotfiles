@@ -50,6 +50,7 @@ NeoBundle 'othree/xml.vim'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'nicklasos/vim-jsx-riot'
 
 " plugins for color
 NeoBundle 'unite-colorscheme',   {'depends': ['Shougo/unite.vim']}
