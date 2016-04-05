@@ -1,0 +1,15 @@
+"*":
+  "api-blueprint-preview": {}
+  "autocomplete-plus": {}
+  core:
+    themes: [
+      "one-light-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Migu 1M"
+    invisibles: {}
+  "exception-reporting":
+    userId: "d6c97492-3dd3-62bc-e5ca-13f5d07e0fa1"
+  welcome:
+    showOnStartup: false
