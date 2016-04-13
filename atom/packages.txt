@@ -1,11 +1,13 @@
 Sublime-Style-Column-Selection@1.5.1
+advanced-open-file@0.14.3
 api-blueprint-preview@0.7.0
 apiary-highlighter@0.4.0
 emmet@2.4.3
 file-icons@1.7.1
 language-api-blueprint@1.0.2
 minimap@4.21.0
+new-file-plus@0.2.1
 pdf-view@0.50.0
 term3@0.21.4
-vim-mode-plus@0.30.0
+vim-mode-plus@0.32.1
 
