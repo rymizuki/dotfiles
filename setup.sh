@@ -12,6 +12,7 @@ fi
 if [ ! -e ~/.vim ]; then
     ln -s ${DOT_FILE_DIR}/vim ~/.vim
     ln -sf ~/.vim/vimrc ~/.vimrc
+    mkdir -p ~/.vimbackup
 fi
 
 ln -sf ${DOT_FILE_DIR}/tmux/tmux.conf ~/.tmux.conf
