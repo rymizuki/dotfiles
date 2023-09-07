@@ -30,7 +30,8 @@ alias la='ls -la'
 alias ll="ls -l"
 #eval `dircolors -b ~/etc/dircolors.conf`
 
-alias vi="vim"
+alias vi="nvim"
+alias vim="nvim"
 alias datetime="perl -e 'print localtime . qq{\n}'"
 alias pm="perldoc -m"
 

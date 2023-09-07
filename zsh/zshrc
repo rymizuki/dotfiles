@@ -104,3 +104,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/iinuma/.gvm/bin/gvm-init.sh" ]] && source "/Users/iinuma/.gvm/bin/gvm-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mizuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mizuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mizuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mizuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/arm-gcc-bin@8/bin:$PATH"
+export PATH="/opt/homebrew/opt/avr-gcc@8/bin:$PATH"
