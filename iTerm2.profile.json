@@ -375,11 +375,11 @@
   },
   "Idle Code" : 0,
   "Ansi 4 Color" : {
-    "Red Component" : 0.15404300391674042,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.78216177225112915,
+    "Red Component" : 0.41779196262359619,
+    "Color Space" : "P3",
+    "Blue Component" : 0.94702142477035522,
     "Alpha Component" : 1,
-    "Green Component" : 0.26474356651306152
+    "Green Component" : 0.65696734189987183
   },
   "Bold Color (Dark)" : {
     "Red Component" : 0.99999600648880005,
