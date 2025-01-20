@@ -221,11 +221,11 @@
     "Green Component" : 0.65218597462148864
   },
   "Cursor Color" : {
-    "Red Component" : 0,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0,
+    "Red Component" : 0.75372314453125,
+    "Color Space" : "P3",
+    "Blue Component" : 0.75372314453125,
     "Alpha Component" : 1,
-    "Green Component" : 0
+    "Green Component" : 0.75372314453125
   },
   "Vertical Spacing" : 1.01,
   "Disable Window Resizing" : true,
